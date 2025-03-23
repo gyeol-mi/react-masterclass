@@ -46,6 +46,9 @@ function App() {
       <Box>
         <span>😊</span>
       </Box>
+      <Box>
+        <span>😊</span>
+      </Box>
     </Wrapper>
   );
 }
