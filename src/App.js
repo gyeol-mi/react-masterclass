@@ -3,21 +3,20 @@ import styled from "styled-components";
 const Father = styled.div`
   display: flex;
 `;
-
-const Btn = styled.button`
-  color: white;
+//tag안에 넣어줄 arrribute를 작성할 수 있음
+const Input = styled.input.attrs({ required: true, minLength: 10 })`
   background-color: tomato;
-  border: 0;
-  border-radius: 15px;
 `;
 
 function App() {
   return (
     <Father as="header">
-      <Btn>Log in</Btn>
-      <Btn as="a" href="/">
-        Log in
-      </Btn>
+      <Input />
+      <Input />
+      <Input />
+      <Input />
+      <Input />
+      <Input />
     </Father>
   );
 }
