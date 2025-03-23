@@ -19,6 +19,10 @@ const rotation = keyframes`
   }
 `;
 
+const Emoji = styled.span`
+  font-size: 36px;
+`;
+
 const Box = styled.div`
   display: flex;
   justify-content: center;
@@ -28,27 +32,18 @@ const Box = styled.div`
   background-color: tomato;
   animation: ${rotation} 5s linear infinite;
   //pseudo-selector
-  //styled-component가 아닌 요소를 부모 styled-component요소에서 선택할 수 있음
-  span {
-    font-size: 36px;
-    //span:hover{}와 같음-단축키처럼 쓴 코드드
-    &:hover {
-      font-size: 50px;
-    }
-    &:active {
-      opacity: 0;
-    }
+  //styled-component요소도 targeting 할 수 있음
+  ${Emoji}:hover {
+    font-size: 100px;
   }
 `;
 function App() {
   return (
     <Wrapper>
       <Box>
-        <span>😊</span>
+        <Emoji as="div">😊</Emoji>
       </Box>
-      <Box>
-        <span>😊</span>
-      </Box>
+      <Emoji as="div">😊</Emoji>
     </Wrapper>
   );
 }
